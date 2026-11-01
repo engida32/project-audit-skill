@@ -1,0 +1,57 @@
+name: Bug report
+description: Report a reproducible problem with the skill, validator, installer, or documentation.
+title: "bug: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Remove API keys, tokens, and private repository
+        paths before posting. Security issues go through the private channel in
+        [SECURITY.md](https://github.com/engida32/project-audit-skill/blob/main/SECURITY.md).
+  - type: input
+    id: commit
+    attributes:
+      label: Commit hash
+      description: The commit you ran. Use `git rev-parse --short HEAD`.
+      placeholder: "fc730d2"
+    validations:
+      required: true
+  - type: input
+    id: agent
+    attributes:
+      label: Agent and version
+      description: The agent harness and the version you used to invoke the skill.
+      placeholder: "OpenCode 1.x, Claude Code 2.x, Codex CLI 0.x"
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Prompt
+      description: The smallest prompt that reproduces the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed result
+      description: What the agent actually did, including the relevant error text.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: What the skill should have done instead.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for the same problem.
+          required: true
+        - label: I removed secrets and private repository data from this report.
+          required: true

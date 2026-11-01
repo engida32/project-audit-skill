@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/engida32/project-audit-skill/security/advisories/new
+    about: Report a vulnerability privately. Do not open a public issue.
+  - name: Security policy and safe use
+    url: https://github.com/engida32/project-audit-skill/blob/main/SECURITY.md
+    about: Read SECURITY.md before reporting guidance that could expose data.
+  - name: Contributing guide
+    url: https://github.com/engida32/project-audit-skill/blob/main/CONTRIBUTING.md
+    about: Read CONTRIBUTING.md before proposing a change.

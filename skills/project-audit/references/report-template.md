@@ -35,14 +35,16 @@ Record the baseline commands and results:
 
 ## C. Findings
 
-| ID | Severity | Confidence | Category | Title | Status |
-| --- | --- | --- | --- | --- | --- |
-| AUD-001 | P0 | confirmed | Security | ... | open |
-| AUD-002 | P1 | likely | Architecture | ... | planned |
+| ID | Severity | Confidence | Verification | Category | Title | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| AUD-001 | P0 | confirmed | independent | Security | ... | open |
+| AUD-002 | P1 | likely | single-pass | Architecture | ... | planned |
 
 Then one section per finding, using the schema in
 `findings-and-severity.md`. Include evidence, impact, fix, risk, validation, and
-effort.
+effort. Mark every P0 and P1 that had no independent check as
+`verification: single-pass`, and list the unverified findings in the coverage
+and limitations section.
 
 ## D. Architecture
 
