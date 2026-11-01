@@ -177,4 +177,7 @@ MIT. See [LICENSE](LICENSE).
 
 ## Author
 
-Engida <engida32lishan@gmail.com>
+Engida Lishan
+
+- Website: [engida.devs.et](https://engida.devs.et)
+- Email: [Send a message](mailto:engida32lishan@gmail.com)

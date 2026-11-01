@@ -11,9 +11,7 @@ data, rewrite published history, or run a destructive command.
 Do not open a public issue for a report that includes a secret, a private
 repository path, or an exploitable technique. Send a private report to:
 
-```text
-engida32lishan@gmail.com
-```
+[Send a private email](mailto:engida32lishan@gmail.com)
 
 Include:
 
