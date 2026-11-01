@@ -2,6 +2,11 @@
 
 Thanks for improving Project Audit Skill.
 
+Read [GOVERNANCE.md](GOVERNANCE.md) for roles, versioning, and release steps, and
+[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for expected behavior. In short: open a
+focused pull request, keep it respectful, and let the required `validate` check
+pass.
+
 ## Before you change the skill
 
 1. Read `skills/project-audit/SKILL.md` and the relevant reference file.

@@ -9,7 +9,14 @@ data, rewrite published history, or run a destructive command.
 ## Reporting
 
 Do not open a public issue for a report that includes a secret, a private
-repository path, or an exploitable technique. Send a private report to:
+repository path, or an exploitable technique.
+
+Preferred when enabled: use
+[GitHub private vulnerability reporting](https://github.com/engida32/project-audit-skill/security/advisories/new).
+It keeps the report private to the maintainer and gives us a place to coordinate
+a fix.
+
+Fallback: if private reporting is unavailable, send a private email to:
 
 [Send a private email](mailto:engida32lishan@gmail.com)
 
