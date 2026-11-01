@@ -1,0 +1,33 @@
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Local configuration
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+build/
+node_modules/
+
+# Logs and temporary files
+*.log
+tmp/
