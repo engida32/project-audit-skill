@@ -41,6 +41,21 @@ If the mode is unclear, use `report`. A request to "audit" is not permission to
 rewrite. A request to "fix everything" is still a request to plan first when the
 work crosses API, schema, security, or architecture boundaries.
 
+## Resume and adopt
+
+Before Phase 0, check for an existing audit artifact: `AUDIT.md`,
+`audit-report.md`, `docs/audit/`, or a path the user names. If one exists, read
+its scope, baseline, findings, statuses, and open questions. Treat it as a
+resume: continue from the recorded state, re-verify the claims that matter, and
+do not restart the audit or duplicate findings. If the artifact and the current
+tree disagree, the tree wins; record the drift.
+
+When an audit spans sessions, write or update a lightweight `AUDIT.md` at the
+repository root or a user-approved path. Keep it to scope, baseline, findings,
+statuses, and the next step. It is a handoff note, not a copy of the full
+runtime or a second report. Do not write it when the location is read-only or
+the user has not approved a writable path.
+
 ## Phase 0: Scope and baseline
 
 1. Confirm the repository root, branch, commit, and working-tree state.
@@ -162,6 +177,12 @@ Re-run the baseline commands and compare. Then check:
 - The diff contains no secrets, generated artifacts, or unrelated edits.
 - New behavior has tests; existing behavior still has coverage.
 - The final tree passes the same checks the project uses in CI.
+- Every P0 and P1 finding has had an independent check.
+
+For the independent check, give a fresh context or separate reviewer only the
+finding, the cited file, and the command output. Do not hand over the audit
+narrative or the proposed fix. If no separate reviewer is available, mark the
+finding `verification: single-pass` in the report and say so in the limitations.
 
 Report the exact commands and results. "Tests pass" without the command and
 output is not a verification.
@@ -228,3 +249,5 @@ Stop and re-check when you catch yourself saying:
 - [Report template](references/report-template.md): the deliverable structure.
 - [Platform install](references/platform-install.md): portable install paths and
   usage examples.
+- [Behavioral tests](TESTS.md): manual scenarios and pass conditions for the
+  skill contract.

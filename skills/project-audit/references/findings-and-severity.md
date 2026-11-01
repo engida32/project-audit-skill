@@ -11,6 +11,7 @@ plan.
 | `title` | Short, specific, and searchable |
 | `severity` | `P0`, `P1`, `P2`, or `P3` |
 | `confidence` | `confirmed`, `likely`, or `unverified` |
+| `verification` | `independent`, `single-pass`, or `not-required`; P0 and P1 require `independent` |
 | `category` | Architecture, code quality, dependencies, security, performance, tests, docs, repository, release |
 | `location` | `path:line`, command, or config key from the current tree |
 | `evidence` | The code path, command output, measurement, or test that proves it |
@@ -66,6 +67,7 @@ For each approved finding, write:
 AUD-003: Session lookup ignores expiry
 Severity: P1
 Confidence: confirmed
+Verification: independent
 Location: src/auth/session.ts:84
 Cause: The lookup returns a row before checking expires_at.
 Fix: Reject expired rows in the query and add a boundary test.
@@ -81,6 +83,7 @@ Depends on: none
 AUD-001: Public build copies .env into the static bundle
 Severity: P0
 Confidence: confirmed
+Verification: independent
 Category: Security
 Location: scripts/build.mjs:41
 Evidence: The copy step includes every file matching .env*, and the output
@@ -96,6 +99,24 @@ Validation: npm run build; inspect dist for .env*; add a test that fails when a
 Effort: S
 Depends on: none
 ```
+
+## Independent verification (P0 and P1)
+
+A P0 or P1 finding is not independently verified until a second pass has checked
+it. The second pass should see only:
+
+1. The finding statement.
+2. The cited file and lines.
+3. The command output or reproduction.
+
+Do not include the audit narrative, the suspected cause, or the proposed fix.
+Those bias the check. The reviewer answers one question: does the evidence
+support the claim at the stated severity?
+
+If a separate reviewer or fresh context is unavailable, set
+`verification: single-pass` and state that in the report's limitations. Never
+describe a single-pass finding as independently verified. P2 and P3 findings use
+`verification: not-required` unless you choose to check them.
 
 ## Reporting rules
 
