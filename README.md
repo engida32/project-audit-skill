@@ -5,8 +5,6 @@
 A portable Agent Skill for evidence-based repository audits, prioritized
 remediation plans, and staged refactoring.
 
-Repository: <https://github.com/engida32/project-audit-skill>
-
 A generic "audit this repo" prompt can produce a long list of advice without
 showing its work. This skill forces the agent to work from the current tree,
 cite evidence, separate findings from guesses, and stop before making risky
