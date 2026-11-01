@@ -19,12 +19,12 @@ SECRET_PATTERNS = (
 TEXT_SUFFIXES = {".md", ".py", ".sh", ".yml", ".yaml", ".json", ".toml"}
 
 
-def parse_frontmatter(text: str) -> tuple[dict[str, str], str]:
+def parse_frontmatter(text: str) -> tuple[dict[str, str] | None, str]:
     if not text.startswith("---\n"):
-        return {}, text
-    end = text.find("\n---\n", 4)
+        return None, text
+    end = text.find("\n---\n", 3)
     if end == -1:
-        return {}, text
+        return None, text
     raw = text[4:end]
     body = text[end + 5 :]
     data: dict[str, str] = {}
@@ -66,8 +66,9 @@ def validate_skill(skill_dir: Path) -> tuple[list[str], list[str]]:
 
     text = skill_file.read_text(encoding="utf-8")
     frontmatter, body = parse_frontmatter(text)
-    if not frontmatter:
+    if frontmatter is None:
         errors.append("SKILL.md must start with YAML frontmatter delimited by ---")
+        frontmatter = {}
 
     name = frontmatter.get("name", "")
     description = frontmatter.get("description", "")

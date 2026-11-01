@@ -52,6 +52,7 @@ class ValidateSkillTests(unittest.TestCase):
             errors, _ = validate_skill.validate_skill(skill)
             self.assertTrue(any("missing name" in error for error in errors))
             self.assertTrue(any("missing description" in error for error in errors))
+            self.assertFalse(any("must start with YAML frontmatter" in error for error in errors))
 
     def test_name_must_match_directory(self) -> None:
         with tempfile.TemporaryDirectory() as raw:
