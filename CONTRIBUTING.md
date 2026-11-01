@@ -42,7 +42,7 @@ request.
 
 ## Reporting a problem
 
-Open an issue with the skill version, the agent and version, the prompt, and the
+Open an issue with the commit hash, the agent and version, the prompt, and the
 observed result. Remove secrets and private repository data before posting.
 
 For a security-sensitive report, follow `SECURITY.md`.
