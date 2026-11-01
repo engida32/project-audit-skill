@@ -11,7 +11,7 @@ data, rewrite published history, or run a destructive command.
 Do not open a public issue for a report that includes a secret, a private
 repository path, or an exploitable technique.
 
-Preferred when enabled: use
+Preferred: use
 [GitHub private vulnerability reporting](https://github.com/engida32/project-audit-skill/security/advisories/new).
 It keeps the report private to the maintainer and gives us a place to coordinate
 a fix.

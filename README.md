@@ -217,8 +217,7 @@ steps live in [GOVERNANCE.md](GOVERNANCE.md).
 
 The project has a single maintainer. Useful references:
 
-- [GOVERNANCE.md](GOVERNANCE.md): roles, versioning, and required repository
-  settings.
+- [GOVERNANCE.md](GOVERNANCE.md): roles, versioning, and repository settings.
 - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md): expected behavior and reporting.
 - [AGENT_PROMPT.md](AGENT_PROMPT.md): the prompt that packages the skill.
 - [skills/project-audit/TESTS.md](skills/project-audit/TESTS.md): manual test

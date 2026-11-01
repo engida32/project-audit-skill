@@ -51,11 +51,9 @@ vulnerability reporting at
 <https://github.com/engida32/project-audit-skill/security/advisories/new>.
 Email to `engida32lishan@gmail.com` is the fallback. See `SECURITY.md`.
 
-## Required repository settings
+## Repository settings
 
-These settings are part of the governance model and must be enabled in the
-GitHub repository:
+Private vulnerability reporting is enabled, so the advisory link above works.
 
-- Branch protection on `main`, including a required `validate` status check and
-  no force pushes.
-- Private vulnerability reporting enabled, so the advisory link above works.
+Branch protection on `main` is recommended, including a required `validate`
+status check and no force pushes. It is not enabled yet.
